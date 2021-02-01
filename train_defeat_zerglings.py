@@ -75,6 +75,7 @@ def main():
       map_name="DefeatZerglingsAndBanelings",
       step_mul=step_mul,
       visualize=True,
+      players=[sc2_env.Agent(sc2_env.Race.terran)],
       game_steps_per_episode=steps * step_mul) as env:
 
     model = deepq.models.cnn_to_mlp(
